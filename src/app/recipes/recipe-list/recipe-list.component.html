@@ -1,0 +1,20 @@
+
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-success" (click)="onNewRecipe()" style="cursor: pointer; font-weight: bold" >New Recipe</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <app-recipe-item 
+            *ngFor="let recipeEl of recipes; let i = index"
+            [recipe]="recipeEl"
+            style="cursor: pointer"
+            [index]= "i"
+            >
+            </app-recipe-item>
+        </div>
+        
+    </div>
+
